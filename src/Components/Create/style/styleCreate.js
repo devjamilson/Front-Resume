@@ -7,7 +7,7 @@ export const Container = styled.div`
    align-items: center;
    justify-content: center;
 `
-export const ContNote = styled.div`
+export const ContNote = styled.form`
    background-color: #fff;
    height: 90vh;
    border-radius: 20px;
@@ -49,17 +49,19 @@ export const ContNote = styled.div`
         align-items: center;
         justify-content: flex-end;
         flex-direction: row;
-        button{
-            margin-right: 2.5%;
-            border: none;
-            background-color: #4365D0;
-            color: #fff;
-            height: 5vh;
-            border-radius: 9px;
-            width:14%;
-            cursor: pointer;
-        }
    }
+   button{
+      margin-top: 2vh;
+      margin-left: 81%;
+      border: none;
+      background-color: #4365D0;
+      color: #fff;
+      height: 5vh;
+      border-radius: 9px;
+      width:14%;
+      cursor: pointer;
+   }
+
 `
 
 export const SubContRecentesNoti = styled.div`
@@ -70,6 +72,10 @@ export const ContRecentes = styled.div`
    background-color: transparent;
    height: 80vh;
    margin-left: 4%;
+   display: flex;
+   flex-direction: column;
+   width:100%;
+
    h1{
         font-size: 20px;
         font-weight: normal;
@@ -80,3 +86,21 @@ export const ContRecentes = styled.div`
 export const ContNotificacao = styled.div`
    background-color: #FBFBFB;
 `
+export const Comp = styled.div`
+    display: flex;
+    flex-direction: row;
+
+`
+
+export const CardRecentes = styled.div`
+   background-color: #fff;
+   height: 30vh;
+   width: 32%;
+   border-radius: 15px;
+   margin:2%; 
+   display: flex;
+   flex-direction: column;
+   padding: 5%;
+`
+
+
