@@ -13,7 +13,6 @@ export const Comp = styled.div`
      display: grid;
      grid-template-columns: 30% 30% 30%;
      gap: 5vh;
-
 `
 
 export const Card = styled.div`

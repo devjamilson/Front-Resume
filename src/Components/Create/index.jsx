@@ -56,7 +56,7 @@ export  default function Create(){
                    <Comp>
                       {resumos.map((item)=>(
                             <CardRecentes key={item.id}>
-                                <h2>{item.titulo}</h2>
+                                <h2>{item.titulo[0].toUpperCase()+item.titulo.substring(1)}</h2>
                                 <p>{item.conteudo}</p>
                             </CardRecentes>
                       ))

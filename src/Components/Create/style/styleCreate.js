@@ -91,8 +91,10 @@ export const Comp = styled.div`
     display: grid;
     grid-template-columns: 30% 30% 30%;
     gap: 4%;
-    overflow: auto;
-
+    overflow-y: scroll;
+   &::-webkit-scrollbar {
+      width:0;
+   }
 `
 
 export const CardRecentes = styled.div`

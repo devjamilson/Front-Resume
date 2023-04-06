@@ -11,11 +11,11 @@ export const Container = styled.div`
 `
 
 export const ContButton = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 23vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 23vh;
    width: 6%;
 
 `
@@ -34,7 +34,7 @@ export const Button = styled.button`
 
    *{
       color: #fff;
-      font-size: 26px;
+      font-size: 22px;
    }
 `
 export const ContConfig = styled.button`
