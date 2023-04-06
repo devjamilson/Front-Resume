@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
-import { Container, Card } from "./style/styleHome";
+import { Container, Card, Comp} from "./style/styleHome";
 
 export default function Home(){
     const [resumos, setResumos]= useState([])
@@ -21,13 +21,16 @@ export default function Home(){
 
     return(
         <Container>
-            {resumos.map((item)=>(
-                    <Card key={item.id}>
-                        <h2>{item.titulo}</h2>
-                        <p>{item.conteudo}</p>
-                    </Card>
-                ))
-            }
+            <Comp>
+                {resumos.map((item)=>(
+                        <Card key={item.id}>
+                            <h2>{item.titulo}</h2>
+                            <p>{item.conteudo}</p>
+                        </Card>
+                    ))
+                }
+            </Comp>
+                
         </Container>
     )
 }
