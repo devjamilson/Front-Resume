@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const ContNote = styled.form`
    background-color: #fff;
    height: 90vh;
-   border-radius: 20px;
+   border-radius: 15px;
    box-shadow: 2px 2px 10px 0px rgb(0,0,0,0.05);
    width: 45%;
    display: flex;
@@ -23,7 +23,7 @@ export const ContNote = styled.form`
         width: 92%;
         outline: none;
         border: none;
-        background-color: #F5F5F5;
+        background-color: #fafafa;
         padding-left: 15px;
         font-size: 18px;
         font-weight: bold;
@@ -31,7 +31,7 @@ export const ContNote = styled.form`
    }
    textarea{
         border: none;
-        background-color: #F5F5F5;
+        background-color: #fafafa;
         border-radius: 10px;
         width: 92%;
         padding-left: 15px;
@@ -105,16 +105,17 @@ export const CardRecentes = styled.div`
    margin:2%; 
    display: flex;
    flex-direction: column;
-   padding: 5%;
+   padding-left: 6%;
    box-shadow: 2px 2px 10px 0px rgb(0,0,0,0.05);
 
    overflow: hidden; // Removendo barra de rolagem
    text-overflow: ellipsis; // Adicionando "..." ao final
    display: -webkit-box;
-   -webkit-line-clamp: 4; // Quantidade de linhas
+   -webkit-line-clamp:auto; // Quantidade de linhas
    -webkit-box-orient: vertical;
    h2{
       font-size: 18px;
+      color: #4365D0;
    }
    p{
       margin-top: 1vh;

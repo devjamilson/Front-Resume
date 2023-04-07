@@ -2,22 +2,31 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import { Container, Card, Comp, Pesquisar} from "./style/styleView";
 import {BiSearch} from 'react-icons/bi'
+import {MdDelete} from 'react-icons/md'
 
 export default function Home(){
     const [resumos, setResumos]= useState([])
     const [titulo, setTitulo] = useState('')
 
-    const getResumos = async () =>{
+
+    const getResumos = async (id) =>{
         try{
             const res = await axios.get(`https://api-resumo.onrender.com/resume`)
             console.log(res.data)
-            setResumos(res.data)
+            console.log(id)
+            setResumos(res.data.reverse())
            
         }catch(e){
            console.log(e)
         }
     }
 
+
+    const getDelete= async () =>{
+        
+        await axios.delete(`https://api-resumo.onrender.com/resume/`)
+        
+    }
 
     useEffect(()=>{
         getResumos()
@@ -51,13 +60,16 @@ export default function Home(){
             <Comp>
                 {resumos.map((item)=>(
                         <Card key={item.id}>
-                            <h2>{item.titulo[0].toUpperCase()+item.titulo.substring(1)}</h2>
+                            <span>
+                                <button onClick={getDelete}><MdDelete></MdDelete></button>
+                                <h2>{item.titulo[0].toUpperCase()+item.titulo.substring(1)}</h2>
+                            </span>
+                            
                             <p>{item.conteudo}</p>
                             <div>
                                 <span>{formatDate(item.createdAt)}</span>
                                 <span>{formatHour(item.createdAt)}</span>
                             </div>
-                           
                         </Card>
                     ))
                 }

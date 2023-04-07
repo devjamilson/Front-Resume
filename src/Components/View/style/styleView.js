@@ -47,9 +47,7 @@ export const Card = styled.div`
    -webkit-box-orient: vertical;
 
 
-   h2{
-    margin: 0;
-   }
+   
 
    div{
     display: flex;
@@ -59,6 +57,23 @@ export const Card = styled.div`
       color: #959595;
     }
    }
+    span{
+      button{
+        border: none;
+        float: right;
+        cursor: pointer;
+        background-color: transparent;
+        *{
+          color: #ff9890;
+          font-size: 18px;
+        }
+      }
+      h2{
+        margin: 0;
+        color: #4365D0;
+      }
+    }
+   
 
 `
 

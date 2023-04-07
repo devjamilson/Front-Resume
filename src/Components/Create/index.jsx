@@ -13,7 +13,8 @@ export  default function Create(){
         try{
             const res = await axios.get('https://api-resumo.onrender.com/resume')
             console.log(res.data)
-            setResumos(res.data)
+            
+            setResumos(res.data.reverse())
         }catch(e){
            console.log(e)
         }
